@@ -1,0 +1,295 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLASHWAY ADMIN</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/WhatsApp Image 2025-05-16 at 08.30.49_ba11a200.jpg" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+
+    
+     <link rel="stylesheet" href="css_gen/css_train_admin.css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<!--  section de mots de pass d'admin-->
+<body class="main-layout">
+    <div id="admin-password-overlay" 
+    style="position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(255,255,255,0.8);backdrop-filter:blur(8px);
+    display:flex;align-items:center;justify-content:center;">
+        <div style="background:white;padding:40px 30px;border-radius:12px;box-shadow:0 2px 16px rgba(0,0,0,0.15);text-align:center;">
+            <h3>Admin Access</h3>
+            <input type="password" id="admin-password-input" placeholder="Enter password" style="padding:8px 12px;border-radius:5px;border:1px solid #ccc;">
+            <button id="admin-password-btn" style="margin-left:10px;padding:8px 16px;border-radius:5px;border:none;background:#e74c3c;color:white;">Enter</button>
+            <div id="admin-password-error" style="color:red;margin-top:10px;display:none;">Incorrect password</div>
+        </div>
+    </div>
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+    </div>
+
+    <header>
+        <div class="header">
+            <img src="images/WhatsApp Image 2025-05-16 at 08.30.49_ba11a200.jpg" alt="logoimage"style="width: 81px;" class="imagelogo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="http://localhost:3000/base/index.html">Home</a>  </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="booking_ocline" id="booking-section">
+        <div class="container d-flex justify-content-center align-items-center" style="
+        padding-bottom: 23‒;">
+            <form id="searchTrainsForm" class="book_now w-50">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center mb-3">
+                        <div class="titlepage">
+                            <h2>admin page</h2>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="admin-stats" class="container my-4" style=" margin-left: 319.4;">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="stat-box stat-total-clients">
+                    <span class="stat-icon"><i class="fa fa-users"></i></span>
+                    <h4 id="stat-total-clients">0</h4>
+                    <span>Total Clients</span>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="stat-box stat-popular-train">
+                    <span class="stat-icon"><i class="fa fa-train"></i></span>
+                    <h4 id="stat-popular-train">N/A</h4>
+                    <span>Most Popular Train</span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-box stat-popular-payment">
+                    <span class="stat-icon"><i class="fa fa-credit-card"></i></span>
+                    <h4 id="stat-popular-payment">N/A</h4>
+                    <span>Most Used Payment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="clientinfo-table-container">
+        <table id="clientinfo-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Carte de Crédit</th>
+                    <th>Mois d'Expiration</th>
+                    <th>Année d'Expiration</th>
+                    <th>Méthode de Paiement</th>
+                    <th>ID Train</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="7">Loading client information...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Contact US</h3>
+                        <ul class="conta">
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
+                            <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> flashway@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Menu Link</h3>
+                        <ul class="link_menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#booking-section">Book Now</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Newsletter</h3>
+                        <form class="bottom_form">
+                            <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                            <button class="sub_btn">Subscribe</button>
+                        </form>
+                        <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        async function fetchClientInfo() {
+            try {
+                const response = await fetch('/api/clientinfos');
+                const data = await response.json();  //parsing automatically
+
+                // Total clients       //data represente table des clients
+                document.getElementById('stat-total-clients').textContent = data.length;
+               
+
+                // Most popular train
+                // Compte combien de fois chaque train apparaît
+                      const trainCounts = {};
+
+                         data.forEach(item => {
+                            // Get the train ID from the item  item.trainid
+                             trainCounts[item.trainId] = (trainCounts[item.trainId] || 0) + 1;
+                             });
+
+                               let popularTrainId = null;
+                                  let maxCount = 0;
+
+                                     Object.keys(trainCounts).forEach(trainId => {
+                              if (trainCounts[trainId] > maxCount) {
+                                       maxCount = trainCounts[trainId];
+                                        popularTrainId = trainId;
+                                                          }
+                                     });
+
+// Set default display text
+const popularTrainElement = document.getElementById('stat-popular-train');
+popularTrainElement.textContent = 'N/A';
+
+if (popularTrainId) {
+  try {
+    const response = await fetch(`/api/trains/${popularTrainId}`);
+    const train = await response.json();
+    popularTrainElement.textContent = train.name || 'N/A';
+  } catch (error)
+  { console.error('error fetching train name')}
+
+}
+
+// Most used payment method
+                const paymentCounts = {};
+
+data.forEach(item => {
+  paymentCounts[item.paymentMethod] = (paymentCounts[item.paymentMethod] || 0) + 1;
+});
+
+let popularPaymentMethod = null;
+let max = 0;
+
+Object.keys(paymentCounts).forEach(method => {
+  if (paymentCounts[method] > max) {
+    max = paymentCounts[method];
+    popularPaymentMethod = method;
+  }
+});
+
+document.getElementById('stat-popular-payment').textContent = popularPaymentMethod || 'N/A';
+
+
+                // Fill table
+                const tableBody = document.getElementById('clientinfo-table').querySelector('tbody');
+                tableBody.innerHTML = '';//supprimer les lignes dans tbody
+                if (data.length === 0) {
+                    tableBody.innerHTML = '<tr><td colspan="7">No client information available</td></tr>';
+                    return;
+                }
+                data.forEach(client => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td data-label="Nom">${client.nom}</td>
+                        <td data-label="Prénom">${client.prenom}</td>
+                        <td data-label="Carte de Crédit">${client.creditCard}</td>
+                        <td data-label="Mois d'Expiration">${client.expiryMonth}</td>
+                        <td data-label="Année d'Expiration">${client.expiryYear}</td>
+                        <td data-label="Méthode de Paiement">${client.paymentMethod}</td>
+                        <td data-label="ID Train">${client.trainId}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error('Error fetching client info:', error);
+            }
+        }
+
+        // Automatically redirect to localhost after 9 seconds
+        setTimeout(() => {
+            window.location.href = 'http://localhost:3000/base/train_admin.html';
+        }, 100000);
+
+        // Fetch client info after page load
+        window.onload = fetchClientInfo;
+    </script>
+
+    <script>
+        // mots de passe admin
+        document.body.classList.add('admin-blur');
+        
+        const overlay = document.getElementById('admin-password-overlay');
+        
+        const input = document.getElementById('admin-password-input');
+        
+        const btn = document.getElementById('admin-password-btn');
+        const error = document.getElementById('admin-password-error');
+        const PASSWORD = 'admin123'; //  password
+
+        btn.onclick = function() {
+            if (input.value === PASSWORD) {
+                overlay.style.display = 'none';
+                document.body.classList.remove('admin-blur');
+            } else {
+                error.style.display = 'block';
+            }
+        };
+        
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    
+</body>
+</html>

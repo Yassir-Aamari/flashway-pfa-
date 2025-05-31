@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FW-TICKET</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="images/WhatsApp Image 2025-05-16 at 08.30.49_ba11a200.jpg" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css_gen/css_testticket.css">
+    
+</head>
+<body class="main-layout">
+    <div class="loader_bg" id="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+    </div>
+    <header>
+        <div class="header">
+            <img src="images/WhatsApp Image 2025-05-16 at 08.30.49_ba11a200.jpg" alt="logoimage"style="width: 81px;" class="imagelogo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>  
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="cardWrap">
+        <div class="ticket-flex-header"> <img src="images/Untitled Project.jpg" alt="" style="
+    width: 100px;"></div>
+        <div class="ticket-flex-container">
+            <div class="ticket-info-rectangle">
+                <div class="ticket-info-row">
+                    <div>
+                        <span class="ticket-info-label">Name</span>
+                        <span class="ticket-info-value" id="ticket-name">Loading...</span>
+                    </div>
+                    <div>
+                        <span class="ticket-info-label">Prénom</span>
+                        <span class="ticket-info-value" id="ticket-prenom">Loading...</span>
+                    </div>
+                </div>
+                <div class="ticket-info-row">
+                    <div>
+                        <span class="ticket-info-label">Payment Method</span>
+                        <span class="ticket-info-value" id="ticket-payment-method">Loading...</span>
+                    </div>
+                    <div style="text-align:left; margin-left:125px;">
+                        <span class="ticket-info-label" style="text-align:left;">Train Name</span>
+                        <span class="ticket-info-value" style="text-align:left;" id="ticket-train-name">Loading...</span>
+                    </div>
+                </div>
+                <div class="ticket-stations-row" style="display: flex; align-items: center;">
+                    <div class="station-box" style="text-align:left;">
+                        <span class="station-label" style="text-align:left;">Departure Station</span>
+                        <span class="station-value" style="text-align:left;" id="ticket-departure-station">Loading...</span>
+                    </div>
+                    <div style="margin: 0 18px; font-size: 2em; color: #e84c3d; display: flex; align-items: center;">
+                        <!-- Unicode arrow or SVG for better style -->
+                        <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="2" y1="12" x2="32" y2="12" stroke="#e84c3d" stroke-width="3" stroke-linecap="round"/>
+                            <polyline points="24,5 32,12 24,19" fill="none" stroke="#e84c3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="station-box" style="text-align:left; margin-left: 0;">
+                        <span class="station-label" style="text-align:left;">Arrival Station</span>
+                        <span class="station-value" style="text-align:left;" id="ticket-arrival-station">Loading...</span>
+                    </div>
+                </div>
+                <div class="ticket-bottom-row">
+                    <div class="bottom-box" style="text-align:left;">
+                        <span class="bottom-label">Departure Date</span>
+                        <span class="bottom-value" id="ticket-departure-date" style="font-size:1.15em;">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ticket-divider">
+                <div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="ticket-right-side" style=" left: 40px;">
+                <div class="ticket-qr-box" style="margin-top:0; display:flex; align-items:center; justify-content:center; height:180px;">
+                    <img id="qrCode" alt="QR Code for Ticket URL" style="width:140px;height:140px;border-radius:12px;border:2px solid #e84c3d;background:#fff;object-fit:contain;display:block;" />
+                </div>
+                <div class="ticket-seat-box">
+                    <div class="ticket-seat-label">Seat</div>
+                    <div class="ticket-seat-value" id="ticket-seat-number">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Contact US</h3>
+                        <ul class="conta">
+                            <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
+                            <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> flashway@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Menu Link</h3>
+                        <ul class="link_menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#booking-section">Book Now</a></li>
+                            <li><a href="#contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Newsletter</h3>
+                        <form class="bottom_form">
+                            <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                            <button class="sub_btn">Subscribe</button>
+                        </form>
+                        <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Hide loader once DOM is ready
+            document.getElementById('loader_bg').style.display = 'none';
+
+            const queryParams = new URLSearchParams(window.location.search); // Get URL parameters to fill the ticket
+            document.getElementById('ticket-name').textContent = queryParams.get('nom') || 'N/A';
+            document.getElementById('ticket-prenom').textContent = queryParams.get('prenom') || 'N/A';
+            document.getElementById('ticket-payment-method').textContent = queryParams.get('paymentMethod') || 'N/A';
+            document.getElementById('ticket-seat-number').textContent = queryParams.get('seatNumber') || 'N/A';
+            document.getElementById('ticket-train-name').textContent = queryParams.get('trainName') || 'N/A';
+            document.getElementById('ticket-departure-station').textContent = queryParams.get('departureStation') || 'N/A';
+            document.getElementById('ticket-arrival-station').textContent = queryParams.get('arrivalStation') || 'N/A';
+            document.getElementById('ticket-departure-date').textContent = queryParams.get('departureDate') || 'N/A';
+
+            // Use ngrok URL for QR code
+            const params = window.location.search;// Get the current URL parameters
+            // Construct the base URL for the QR code
+            const baseUrl = ' https://96b2-105-72-174-113.ngrok-free.app/base/testticket.html';// Replace with your ngrok URL
+            const qrUrl = `${baseUrl}${params}`;// Append the parameters to the base URL
+            // Generate the QR code using an external API
+            const qrCodeApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrUrl)}`;
+            const qrImg = document.getElementById('qrCode');// Get the image element for the QR code
+            // Set the src attribute to the generated QR code URL
+            qrImg.src = qrCodeApiUrl;
+            qrImg.alt = 'QR Code for Ticket URL';//
+        });
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
