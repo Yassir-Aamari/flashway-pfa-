@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #0f0; /* Green text for a retro feel */
+}
+
+canvas {
+    border: 2px solid #0f0; /* Green border */
+    background-color: #000; /* Black background for the canvas */
+    image-rendering: pixelated; /* Ensures sharp pixels */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
